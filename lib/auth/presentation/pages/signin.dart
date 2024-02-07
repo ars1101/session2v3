@@ -137,7 +137,7 @@ class _SignInState extends State<SignIn> {
                             onPressed: isValid() ? () async {var  res = await supabase.auth.signUp(email: emailctr.text, password: passctr.text  );
                             final Session? session = res.session;
                             final User user = res.user!;
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => home(title: '')))
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => home(title: '')));
                             } : null,
                             child: Text(
                               'Sign in',
